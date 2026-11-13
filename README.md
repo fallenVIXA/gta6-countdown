@@ -33,7 +33,6 @@ Download and extract this repository, then open PowerShell in its directory.
 
 ~~~powershell
 npm.cmd install
-Copy-Item .env.example .env
 notepad .env
 ~~~
 
@@ -58,7 +57,6 @@ Download and extract this repository, then open a terminal in its directory.
 ~~~bash
 node --version
 npm install
-cp -i .env.example .env
 nano .env
 ~~~
 
@@ -93,7 +91,6 @@ Use ls to find the extracted folder, then cd into it and run:
 
 ~~~bash
 npm install
-cp -i .env.example .env
 nano .env
 npm start
 ~~~
@@ -107,14 +104,15 @@ No separate phone scheduler is included.
 
 ## Local configuration
 
-Copy .env.example to .env in the project directory during first-time setup.
+Open the included .env file in the project directory.
 Open .env and paste your bot token immediately after DISCORD_TOKEN=, then save it.
 Keep your existing .env when upgrading.
 Set DISCORD_TOKEN to your own bot token.
 Optionally set DISCORD_ROLE_ID to the ID of a role to mention above the embed.
 Leave DISCORD_ROLE_ID unset to disable mentions.
 
-The template contains empty values. The local .env file is ignored by Git.
+The included .env contains empty values. Never commit your populated .env.
+When working in a Git clone, run git rm --cached .env before filling it in and commit that removal. The existing .gitignore then excludes your local credentials.
 Keep the bot token private.
 
 ## Usage
