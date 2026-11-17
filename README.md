@@ -1,4 +1,4 @@
-# GTA VI Countdown
+# GTA VI Countdown Discord BOT
 
 A lightweight Discord bot that maintains one countdown embed per server, with release and preload tracking, persistent message references and daily updates.
 
